@@ -262,6 +262,12 @@ export const letters: { from: 'a' | 'b'; text: string }[] = []
 
 const places = Array.from(new Set([prologue.b.city, prologue.a.city, ...chapters.map((c) => c.place).filter(Boolean)]))
 
+// Background music, played softly from the moment the page loads. Set to null to switch it off.
+export const song: { src: string; volume: number } | null = {
+  src: '/audio/song.m4a', // Hum Tere Bin Ab Reh Nahi Sakte (Tum Hi Ho), Aashiqui 2
+  volume: 0.35, // 0 to 1; kept low so it sits behind the story
+}
+
 // End credits. `{days}` is replaced with the live count.
 export const credits = [
   { role: 'Starring', names: [couple.a, couple.b] },

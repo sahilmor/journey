@@ -11,6 +11,7 @@ import Lightbox from './components/Lightbox'
 import Loader from './components/Loader'
 import Numbers from './components/Numbers'
 import Prologue from './components/Prologue'
+import Soundtrack from './components/Soundtrack'
 import Storyline from './components/Storyline'
 import { acts, chapters, letters, type Chapter as ChapterData, type Media } from './data/story'
 import { live } from './gl/live'
@@ -107,6 +108,7 @@ export default function App() {
 
       <Header onIndex={() => setIndexOpen(true)} />
       <Timecode />
+      <Soundtrack />
 
       <main>
         <Hero />
